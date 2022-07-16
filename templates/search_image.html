@@ -5,9 +5,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="{% static 'hackerearth.png' %}" rel="icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery</title>
-    <link href="{% static 'hackerearth.png' %}" rel="icon">
     <link href="{% static '/home.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -15,15 +15,8 @@
 <body>
     <div class="nav-container">
         <nav>
-            <span>
-                <img id="logo" src="" alt="" />
-                <a href="/">
-                    <h1>LOGO</h1>
-                </a>
-            </span>
-
             <div class="title">
-                <h1>GALLERY</h1>
+                <h1><a href="/">Tourist Gallery</a></h1>
             </div>
             <ul>
                 <li>
@@ -32,14 +25,13 @@
             </ul>
         </nav>
         <form action="/search/" method="get">
-            {% csrf_token %}
-            <input type="text" placeholder="Search Image Name" name="search" id="search" required="False">
+            <input type="text" placeholder="Search Image Name" name="search" id="search" required="False" />
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
+        <h2 style="width: 340px; margin: auto; margin-top: 50px;">Showing all results for {{ search }}</h2>
     </div>
-    <br><br><br><br>
-    <h5>Showing all results for {{ search }}</h1>
-    <div class="cards">
+
+    <div class="cards" style="margin-top: 200px;">
         {% for i in page_obj %}
         <div class="card">
             <h1>{{ i.ImgName }}</h1>
@@ -56,20 +48,21 @@
     <div class="pagination">
         <span class="step-links">
             {% if page_obj.has_previous %}
-                <a href="?page=1&search={{search}}">&laquo; first</a>
-                <a href="?page={{ page_obj.previous_page_number }}&search={{search}}">previous</a>
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
             {% endif %}
-    
+
             <span class="current">
                 Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
             </span>
-    
+
             {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}&search={{search}}">next</a>
-                <a href="?page={{ page_obj.paginator.num_pages }}&search={{search}}">last &raquo;</a>
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
             {% endif %}
         </span>
     </div>
-        
+
 </body>
+
 </html>

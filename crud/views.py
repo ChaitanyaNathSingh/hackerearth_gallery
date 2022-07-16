@@ -42,7 +42,7 @@ def delete_image(request, id):
 def search_image(request):
     search = request.GET.get('search')
     data = Image.objects.filter(ImgName__icontains=search).order_by('id')
-    paginator = Paginator(data, 2) 
+    paginator = Paginator(data, 9) 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'search_image.html', {'page_obj': page_obj, 'search': search})

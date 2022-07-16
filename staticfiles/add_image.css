@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+    color: #252525;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.nav-container {
+    height: 70px;
+    width: 100%;
+    z-index: 500;
+    background-color: #8336e0;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+nav {
+    width: 98%;
+    margin: auto;
+    min-height: 62px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+input {
+    border-radius: 5px;height: 36px; border:none
+}
+nav span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 10vh;
+    
+}
+
+nav span img {
+    height: 5vh;
+    margin-right: 10px;
+}
+
+nav span h1 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 800;
+    
+}
+
+nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0px 20px;
+}
+
+nav .title h1 a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-left: 50px;
+}
+
+nav ul a:not(.trans-button):hover {
+    color: #fff;
+}
+
+nav ul button {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #fff;
+    ;
+    width: 120px;
+    height: 35px;
+    border-radius: 11px;
+    cursor: pointer;
+    background-color: transparent;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+nav ul button:hover {
+    scale: 1.07;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
