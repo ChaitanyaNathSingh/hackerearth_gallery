@@ -10,3 +10,7 @@ class Image(models.Model):
     # ImgURL = models.ImageField(upload_to='images/', blank=True)
     ImgURL = models.URLField(blank=False)
     ImgDetails = models.TextField(default=None, max_length=1500, blank=False)
+
+    @property
+    def short_description(self):
+        return truncatechars(self.ImgDetails, 100)
