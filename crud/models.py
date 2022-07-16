@@ -1,7 +1,5 @@
-from os import truncate
 from django.db import models
 from django.template.defaultfilters import truncatechars
-from django.utils.safestring import mark_safe
 
 # Create your models here.
 

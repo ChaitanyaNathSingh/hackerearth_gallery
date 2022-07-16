@@ -1,4 +1,3 @@
-from tkinter.messagebox import RETRY
 from django.shortcuts import redirect, render
 from .forms import ImageForm, ImageUpdateForm
 from .models import Image
