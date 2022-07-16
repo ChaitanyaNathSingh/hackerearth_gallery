@@ -83,27 +83,27 @@ WSGI_APPLICATION = 'gallery.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hackerearth',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '3306'
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'dam0ke0eur0s0c',
-#         'USER': 'lcceggqxtaykud',
-#         'PASSWORD': 'cfc885de43e359f900e70846a69bb9c299a3bc9984f1f7f4fe1256edf91f1244',
-#         'HOST': 'ec2-3-217-14-181.compute-1.amazonaws.com',
-#         'PORT': '5432'
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'hackerearth',
+#         'USER': 'root',
+#         'PASSWORD': 'root',
+#         'HOST': 'localhost',
+#         'PORT': '3306'
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dam0ke0eur0s0c',
+        'USER': 'lcceggqxtaykud',
+        'PASSWORD': 'cfc885de43e359f900e70846a69bb9c299a3bc9984f1f7f4fe1256edf91f1244',
+        'HOST': 'ec2-3-217-14-181.compute-1.amazonaws.com',
+        'PORT': '5432'
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

@@ -45,11 +45,12 @@
         </div>
         {% endfor %}
     </div>
-    <div class="pagination">
+
+    <div style="width: 445px; margin: auto; margin-top: 50px;" class="pagination">
         <span class="step-links">
             {% if page_obj.has_previous %}
-            <a href="?page=1">&laquo; first</a>
-            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                <a class="pages" href="?page=1">&laquo;&laquo; first</a>
+                <a class="pages" href="?page={{ page_obj.previous_page_number }}">&laquo; previous</a>
             {% endif %}
 
             <span class="current">
@@ -57,12 +58,12 @@
             </span>
 
             {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">next</a>
-            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                <a class="pages" href="?page={{ page_obj.next_page_number }}">next &raquo;</a>
+                <a class="pages" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;&raquo;</a>
             {% endif %}
         </span>
     </div>
-
+    <br>
 </body>
 
 </html>
