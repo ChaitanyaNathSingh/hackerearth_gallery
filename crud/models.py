@@ -1,0 +1,12 @@
+from os import truncate
+from django.db import models
+from django.template.defaultfilters import truncatechars
+from django.utils.safestring import mark_safe
+
+# Create your models here.
+
+class Image(models.Model):
+    ImgName = models.CharField(max_length=50, blank=False)
+    # ImgURL = models.ImageField(upload_to='images/', blank=True)
+    ImgURL = models.URLField(blank=False)
+    ImgDetails = models.TextField(default=None, max_length=1500, blank=False)

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="shortcut icon" href="#">
+    <link href="{% static '/home.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="nav-container">
+        <nav>
+            <span>
+                <img id="logo" src="" alt="" />
+                <a href="/">
+                    <h1>LOGO</h1>
+                </a>
+            </span>
+
+            <div class="title">
+                <h1>GALLERY</h1>
+            </div>
+            <ul>
+                <li>
+                    <a class="trans-button" href="/new"><button type="button">Add Images</button></a>
+                </li>
+            </ul>
+        </nav>
+        <form action="/search/" method="get">
+            {% csrf_token %}
+            <input type="text" placeholder="Search Image Name" name="search" id="search" required="False">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <br><br><br><br>
+    <h5>Showing all results for {{ search }}</h1>
+    <div class="cards">
+        {% for i in page_obj %}
+        <div class="card">
+            <h1>{{ i.ImgName }}</h1>
+            <div class="img-cont">
+                <img src="{{ i.ImgURL }}" alt="" />
+            </div>
+            <div class="reg-butt">
+                <a href="/{{ i.id }}/edit" class="butt"><button type="button">Edit</button></a>
+                <a href="/delete/{{ i.id }}" class="butt"><button type="button">Delete</button></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1&search={{search}}">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}&search={{search}}">previous</a>
+            {% endif %}
+    
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+    
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}&search={{search}}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}&search={{search}}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+        
+</body>
+</html>
