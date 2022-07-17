@@ -15,8 +15,13 @@
 <body>
     <div class="nav-container">
         <nav>
+            <ul>
+                <li>
+                    <a href="/"><img src="{% static 'plane.png' %}" width="55px" height="55px" style="margin-top: 8px;"></a>
+                </li>
+            </ul>
             <div class="title">
-                <h1><a href="/">Tourist Gallery</a></h1>
+                <h1><a href="/" style="font-size: 24px;">Tourist Gallery</a></h1>
             </div>
             <ul>
                 <li>
@@ -24,14 +29,14 @@
                 </li>
             </ul>
         </nav>
-        <form action="/search/" method="get">
-            <input type="text" placeholder="Search Image Name" name="search" id="search" required="False" />
+        <form action="/search/" method="get" style="margin-right: 113px;">
+            <input type="text" placeholder="Search Image Name" name="search" id="search" style="font-size: 18px;" required="False" />
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
-        <h2 style="width: 340px; margin: auto; margin-top: 50px;">Showing all results for {{ search }}</h2>
+        <h2 style="width: 340px; margin-left: 120px; margin-top: 40px; color: #2575fc;">Showing all results for &nbsp;<span style="font-style: italic; font-size: 28px;">{{ search }}</span></h2>
     </div>
 
-    <div class="cards" style="margin-top: 200px;">
+    <div class="cards" style="margin-top: 140px;">
         {% for i in page_obj %}
         <div class="card">
             <h1>{{ i.ImgName }}</h1>
@@ -46,10 +51,10 @@
         {% endfor %}
     </div>
 
-    <div class="pagination">
+    <div class="pagination" style="margin-top: -70px;">
         <span class="step-links">
             {% if page_obj.has_previous %}
-                <a class="pages" href="?page=1">&laquo;&laquo; first</a>
+                <a class="pages" href="?page=1">&laquo;&laquo;</a>
                 <a class="pages" href="?page={{ page_obj.previous_page_number }}">&laquo; previous</a>
             {% endif %}
 
@@ -59,12 +64,11 @@
 
             {% if page_obj.has_next %}
                 <a class="pages" href="?page={{ page_obj.next_page_number }}">next &raquo;</a>
-                <a class="pages" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;&raquo;</a>
+                <a class="pages" href="?page={{ page_obj.paginator.num_pages }}">&raquo;&raquo;</a>
             {% endif %}
         </span>
     </div>
     <br>
-    
 </body>
 
 </html>

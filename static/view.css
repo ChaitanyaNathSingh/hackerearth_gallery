@@ -34,7 +34,7 @@ a:hover {
     height: 70px;
     width: 100%;
     z-index: 500;
-    background-color: #8336e0;
+    background-color: #4a0395;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
 }
 
@@ -103,7 +103,7 @@ nav .title h1 a {
     font-size: 18px;
     font-weight: 800;
     letter-spacing: 2px;
-    margin-left: 50px;
+    margin-left: -625px;
 }
 
 nav ul a:not(.trans-button):hover {

@@ -34,7 +34,7 @@ a:hover {
     height: 70px;
     width: 100%;
     z-index: 500;
-    background-color: #8336e0;
+    background-color: #4a0395;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
 }
 
@@ -103,7 +103,7 @@ nav .title h1 a {
     font-size: 18px;
     font-weight: 800;
     letter-spacing: 2px;
-    margin-left: 50px;
+    margin-left: -625px;
 }
 
 nav ul a:not(.trans-button):hover {
@@ -173,6 +173,9 @@ nav ul button:hover {
 .cards .card h1 {
     font-size: 25px;
     font-weight: 600;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .cards .card .img-cont {
@@ -230,7 +233,7 @@ nav ul button:hover {
 
 button:hover {
     scale: 1.07;
-    background-color: #311675;
+    background-color: #2575fc;
 }
 
 .abc {
@@ -285,7 +288,7 @@ form button {
 
 .pages {
     text-decoration: none;
-    padding: 8px 16px ;
+    padding: 8px 16px;
     background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
     color: white;
     border-radius: 12px;
@@ -293,11 +296,11 @@ form button {
 
 .img-cont:hover {
     -webkit-box-shadow: 0px 10px 25px -15px #464646;
-            box-shadow: 0px 10px 25px -15px #464646;
+    box-shadow: 0px 10px 25px -15px #464646;
     scale: 1.1;
-  }
-  
-  .img-cont:hover img {
+}
+
+.img-cont:hover img {
     height: 100%;
     width: 100%;
-  }
+}

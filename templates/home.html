@@ -15,8 +15,13 @@
 <body>
     <div class="nav-container">
         <nav>
+            <ul>
+                <li>
+                    <a href="/"><img src="{% static 'plane.png' %}" width="55px" height="55px" style="margin-top: 8px;"></a>
+                </li>
+            </ul>
             <div class="title">
-                <h1><a href="/">Tourist Gallery</a></h1>
+                <h1><a href="/" style="font-size: 24px;">Tourist Gallery</a></h1>
             </div>
             <ul>
                 <li>
@@ -24,8 +29,8 @@
                 </li>
             </ul>
         </nav>
-        <form action="/search/" method="get">
-            <input type="text" placeholder="Search Image Name" name="search" id="search" required="False" />
+        <form action="/search/" method="get" style="margin-right: 113px;">
+            <input type="text" placeholder="Search Image Name" name="search" id="search" style="font-size: 18px;" required="False" />
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
@@ -45,7 +50,7 @@
         {% endfor %}
     </div>
 
-    <div class="pagination">
+    <div class="pagination" style="margin-top: -70px;">
         <span class="step-links">
             {% if page_obj.has_previous %}
                 <a class="pages" href="?page=1">&laquo;&laquo; first</a>

@@ -33,7 +33,7 @@ a:hover {
     height: 70px;
     width: 100%;
     z-index: 500;
-    background-color: #8336e0;
+    background-color: #4a0395;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
 }
 
@@ -53,8 +53,11 @@ nav {
 }
 
 input {
-    border-radius: 5px;height: 36px; border:none
+    border-radius: 5px;
+    height: 36px;
+    border: none
 }
+
 nav span {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -63,7 +66,7 @@ nav span {
     -ms-flex-align: center;
     align-items: center;
     height: 10vh;
-    
+
 }
 
 nav span img {
@@ -75,7 +78,7 @@ nav span h1 {
     font-size: 18px;
     color: #fff;
     font-weight: 800;
-    
+
 }
 
 nav ul {
@@ -99,7 +102,7 @@ nav .title h1 a {
     font-size: 18px;
     font-weight: 800;
     letter-spacing: 2px;
-    margin-left: 50px;
+    margin-left: -625px;
 }
 
 nav ul a:not(.trans-button):hover {
@@ -111,7 +114,6 @@ nav ul button {
     font-size: 16px;
     font-weight: 600;
     border: 2px solid #fff;
-    ;
     width: 120px;
     height: 35px;
     border-radius: 11px;
@@ -229,4 +231,43 @@ input[type=submit]:hover {
     border-radius: 12px;
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
+}
+
+#search_form {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#search_form input {
+    width: 280px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: rgb(221, 220, 218);
+
+}
+
+#search_form button {
+    width: 50px;
+    height: 40px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover {
+    scale: 1.07;
+    background-color: #2575fc;
 }
