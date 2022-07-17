@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     width: 100vw;
     overflow-x: hidden;
     background-color: whitesmoke;
@@ -192,4 +192,41 @@ input[type=submit]:hover {
         width: 100%;
         margin-top: 0;
     }
+}
+
+
+.reg-butt {
+    text-align-last: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    width: 110px;
+    height: 40px;
+    border-radius: 15px;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    outline: none;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+#imgName {
+    border-radius: 12px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#imgURL {
+    border-radius: 12px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#imgDetails {
+    border-radius: 12px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
 }

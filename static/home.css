@@ -273,13 +273,15 @@ form button {
 }
 
 .pagination {
-    width: 445px;
+    /* width: 445px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto; 
-    margin-top: 50px;
+    margin-top: 50px; */
+    text-align-last: center;
 }
+
 .pages {
     text-decoration: none;
     padding: 8px 16px ;

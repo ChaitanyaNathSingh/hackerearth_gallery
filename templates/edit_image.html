@@ -27,11 +27,11 @@
 
     <div class="container">
         <h2 style="width: 230px; margin: auto; margin-top: 25px; margin-bottom: 25px;">Edit Image Details</h2>
-        <form action="" method="POST" name="form">
+        <form action="" method="POST" name="form" style="font-size: 22px;">
             {% csrf_token %}
             <div class="row">
                 <div class="col-25">
-                    <label for="fname">Image Name</label>
+                    <label for="fname">Image Name :</label>
                 </div>
                 <div class="col-75">
                     {{ ImgName }}
@@ -39,7 +39,7 @@
             </div>
             <div class="row">
                 <div class="col-25">
-                    <label for="lname">Image URL</label>
+                    <label for="lname">Image URL :</label>
                 </div>
                 <div class="col-75">
                     {{ form.ImgURL }}
@@ -47,18 +47,19 @@
             </div>
             <div class="row">
                 <div class="col-25">
-                    <label for="subject">Image Details</label>
+                    <label for="subject">Image Details :</label>
                 </div>
                 <div class="col-75">
                     {{ form.ImgDetails }}
                 </div>
             </div>
             <br>
-            <div class="row">
-                <input type="submit" value="Submit">
+            <div class="row" style="margin: auto; text-align-last: center; width: 100vw;">
+                <button class="reg-butt" type="submit">Submit</button>
             </div>
         </form>
     </div>
+    
 </body>
 
 </html>
