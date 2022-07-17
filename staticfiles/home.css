@@ -272,9 +272,16 @@ form button {
     transition: 0.4s;
 }
 
+.pagination {
+    width: 445px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto; 
+    margin-top: 50px;
+}
 .pages {
     text-decoration: none;
-    display: inline-block;
     padding: 8px 16px ;
     background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
     color: white;
