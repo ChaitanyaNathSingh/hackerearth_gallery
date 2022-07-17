@@ -5,18 +5,17 @@ from django.utils.safestring import mark_safe
 # Register your models here.
 
 class ImageAdmin(admin.ModelAdmin):
-    fields = ('id', 'ImgName', 'image', 'ImgDetails')
     list_display = ('id', 'ImgName', 'image', 'short_description')
     search_fields =['ImgName']
     ordering = ['id']
-    readonly_fields = ['image']
+    readonly_fields = ['image', 'short_description']
 
     def image(self, obj):
         return mark_safe('<img src="{url}" width="150" height="150"/>'.format(
             url = obj.ImgURL,
-            )
+        )
     )
-    
+
 admin.site.register(Image, ImageAdmin)
 
 # admin.site.register(Image)
