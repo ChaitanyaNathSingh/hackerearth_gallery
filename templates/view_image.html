@@ -1,1 +1,129 @@
-{{ data.ImgName }}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="{% static 'hackerearth.png' %}" rel="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourist Gallery</title>
+    <link href="{% static '/view.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="nav-container">
+        <nav>
+            <div class="title">
+                <h1><a href="/">Tourist Gallery</a></h1>
+            </div>
+            <ul>
+                <li>
+                    <a class="trans-button" href="/new"><button type="button">Add Images</button></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="wrapper">
+        <div class="left-wrapper">
+            <div class="img-cont">
+                <img src="{{ data.ImgURL }}" alt="" />
+            </div>
+        </div>
+        <div class="right-wrapper">
+            <div class="text-cont">
+                <h1>Image Details</h1>
+                <div class="text">
+                    <h1>Image Name</h1>
+                    <p>
+                        {{ data.ImgName }}
+                    </p>
+                </div>
+                <div class="text">
+                    <h1>Image Description</h1>
+                    <p>
+                        {{ data.ImgDetails }}
+                    </p>
+                </div>
+                <div class="reg-butt">
+                    <a href="/{{ i.id }}/edit" class="butt b1"><button type="button">Edit</button></a>
+                    <a href="/delete/{{ i.id }}" class="butt b2"><button type="button">Delete</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+        integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        //Comfort Timeline animation
+        var comfortTl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
+        comfortTl.from('.comfort-left-container', 2, {
+            width: '0',
+            ease: Expo.easeInOut,
+        });
+
+        comfortTl.from(
+            '.nav-container',
+            1.8,
+            {
+                delay: 1,
+                y: -20,
+                opacity: 0,
+                ease: Expo.easeInOut,
+            },
+            '-=3'
+        );
+
+        comfortTl.from(
+            '.left-wrapper',
+            2,
+            {
+                delay: 1,
+                width: '0',
+                opacity: '0',
+                ease: Expo.easeInOut,
+            },
+            '-=2.8'
+        );
+        // comfortTl.from(
+        //     '.img-cont',
+        //     2,
+        //     {
+        //         width: '0',
+        //         x: -20,
+        //         ease: Expo.easeInOut,
+        //     },
+        //     '-=1.8'
+        // );
+
+        comfortTl.from(
+            '.right-wrapper',
+            2,
+            {
+                y: 20,
+                opacity: 0,
+                ease: Expo.easeInOut,
+            },
+            '-=1.5'
+        );
+
+        comfortTl.from(
+            '.com-social ul',
+            2,
+            {
+                delay: 1,
+                opacity: 0,
+                y: 20,
+                ease: Expo.easeInOut,
+            },
+            '-=3'
+        );
+    </script>
+</body>
+
+</html>
