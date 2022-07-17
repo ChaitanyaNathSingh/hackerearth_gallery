@@ -15,27 +15,30 @@
 <body>
     <div class="nav-container">
         <nav>
-            <ul>
-                <li>
-                    <a href="/"><img src="{% static 'plane.png' %}" width="55px" height="55px" style="margin-top: 8px;"></a>
-                </li>
-            </ul>
+            <span>
+                <a href="/">
+                    <img id="logo" src="{% static 'plane.png' %}" width="65px" height="65px"  alt="" />
+                </a>
+            </span>
+
             <div class="title">
-                <h1><a href="/" style="font-size: 24px;">Tourist Gallery</a></h1>
+                <h1 style="margin-left: -10px;"><a href="/" style="font-size: 24px;">Tourist Gallery</a></h1>
             </div>
+
             <ul>
                 <li>
                     <a class="trans-button" href="/new"><button type="button">Add Images</button></a>
                 </li>
             </ul>
         </nav>
-        <form action="/search/" method="get" style="margin-right: 113px;">
+    </div>
+    <div>
+        <form id="search_form" action="/search/" method="get" style="margin-top: 20px; margin-bottom: 20px; margin-right: 90px;">
             <input type="text" placeholder="Search Image Name" name="search" id="search" style="font-size: 18px;" required="False" />
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
-
-    <div class="wrapper">
+    <div class="wrapper" style="margin-top: -10px;">
         <div class="left-wrapper">
             <div class="img-cont">
                 <img src="{{ data.ImgURL }}" alt="" />
@@ -43,7 +46,7 @@
         </div>
         <div class="right-wrapper">
             <div class="text-cont">
-                <h1>Image Details</h1>
+                <h1 style=" color: #6a11cb;">Image Details</h1>
                 <div class="text">
                     <h1>Image Name</h1>
                     <p>
@@ -67,6 +70,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- GSAP-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
@@ -104,16 +108,6 @@
             },
             '-=2.8'
         );
-        // comfortTl.from(
-        //     '.img-cont',
-        //     2,
-        //     {
-        //         width: '0',
-        //         x: -20,
-        //         ease: Expo.easeInOut,
-        //     },
-        //     '-=1.8'
-        // );
 
         comfortTl.from(
             '.right-wrapper',
