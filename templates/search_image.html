@@ -36,7 +36,7 @@
         <div class="card">
             <h1>{{ i.ImgName }}</h1>
             <div class="img-cont">
-                <img src="{{ i.ImgURL }}" alt="" />
+                <a href="/show/{{ i.id }}"><img src="{{ i.ImgURL }}" alt="" /></a>
             </div>
             <div class="reg-butt">
                 <a href="/{{ i.id }}/edit" class="butt"><button type="button">Edit</button></a>

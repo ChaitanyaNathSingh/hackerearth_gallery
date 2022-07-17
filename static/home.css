@@ -3,10 +3,11 @@
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     width: 100vw;
     overflow-x: hidden;
     background-color: whitesmoke;
@@ -14,7 +15,7 @@ body {
 }
 
 button {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 li {
@@ -289,3 +290,14 @@ form button {
     color: white;
     border-radius: 12px;
 }
+
+.img-cont:hover {
+    -webkit-box-shadow: 0px 10px 25px -15px #464646;
+            box-shadow: 0px 10px 25px -15px #464646;
+    scale: 1.1;
+  }
+  
+  .img-cont:hover img {
+    height: 100%;
+    width: 100%;
+  }
